@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    font: bold 75px font1;
+    text-align: center;
+    width: 80%;
+    margin: 25px auto;
+    color: #7c0d41;
+}
+
+footer p{
+    font: bold 40px font1;
+    color: #7c0d41;
+}
+
+header{
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../res/images/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+@font-face{
+    font-family: 'font1';
+    src: url(../res/font/Angel\ wish.ttf);
+}
+
+@font-face{
+    font-family: 'font2';
+    src: url(../res/font/Ancient\ Medium.ttf);
+}
+
+@font-face{
+    font-family: 'font3';
+    src: url(../res/font/CloisterBlack.ttf);
+}
+
+.Gallery{
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.Gallery img{
+    width: 100%;
+    height: 160px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Gallery img:hover{
+    transform: scale(1.1);
+}
+
+.BigImage{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.BigImage i{
+    color: #FFF;
+    font-size: 32px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.BigImage span{
+    color: #FFF;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.BigImage img{
+    max-width: 80vw;
+    max-height: 80vh;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out{
+    opacity: 0;
+}
+
+.DeleteButton{
+    position: absolute; 
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.Block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between; 
+    padding: 30px; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 30px; 
+    min-height: 400px;
+    box-sizing: border-box; 
+}
+
+.theme-blue-yellow body{
+    background-color: #0074D9;
+    color: #FFDC00;
+    font-family: 'font1', Arial, sans-serif;
+}
+
+.theme-blue-yellow header button,
+.theme-blue-yellow select{
+    background-color: #FFDC00;
+    color: #0074D9;
+    border: 2px solid #0074D9;
+}
+
+.theme-blue-yellow h1{
+    font-family: 'font1', Arial, sans-serif;
+}
+
+.theme-blue-yellow footer p{
+    font-family: 'font1', Arial, sans-serif;
+}
+
+.theme-blue-yellow .Gallery img{
+    border: 3px solid #0074D9;
+}
+
+.theme-blue-yellow .Gallery img.Selected{
+    border: 3px solid #FFDC00;
+}
+
+.theme-white-red body{
+    background-color: #FFFFFF;
+    color: #FF4136;
+    font-family: 'font2', Georgia, serif;
+}
+
+.theme-white-red header button,
+.theme-white-red select{
+    background-color: #FF4136;
+    color: #FFFFFF;
+    border: 2px solid #FF4136;
+}
+
+.theme-white-red h1{
+    font-family: 'font2', Georgia, serif;
+}
+
+.theme-white-red footer p{
+    font-family: 'font2', Georgia, serif;
+}
+
+.theme-white-red .Gallery img{
+    border: 3px solid #FFFFFF;
+}
+
+.theme-white-red .Gallery img.Selected{
+    border: 3px solid #FF4136;
+}
+
+.theme-black-grey body{
+    background-color: #AAAAAA;
+    color: #111111;
+    font-family: 'font3', Courier, monospace;
+}
+
+.theme-black-grey header button,
+.theme-black-grey select{
+    background-color: #111111;
+    color: #AAAAAA;
+    border: 2px solid #111111;
+}
+
+.theme-black-grey h1{
+    font-family: 'font3', Courier, monospace;
+}
+
+.theme-black-grey footer p{
+    font-family: 'font3', Courier, monospace;
+}
+
+.theme-black-grey .Gallery img{
+    border: 3px solid #AAAAAA;
+}
+
+.theme-black-grey .Gallery img.Selected{
+    border: 3px solid #111111;
+}
